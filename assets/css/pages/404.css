@@ -1,0 +1,52 @@
+.error-section {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 24px;
+  position: relative;
+  overflow: hidden;
+}
+
+.error-glow {
+  position: absolute; top: 50%; left: 50%;
+  transform: translate(-50%, -60%);
+  width: 600px; height: 600px;
+  background: radial-gradient(circle, rgba(255,159,10,0.15) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.error-code {
+  font-size: clamp(100px, 20vw, 180px);
+  font-weight: 700;
+  letter-spacing: -6px;
+  line-height: 1;
+  background: linear-gradient(135deg, var(--accent), var(--accent2));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: fadeUp .6s ease both;
+}
+
+.error-title {
+  font-size: clamp(20px, 4vw, 32px);
+  font-weight: 700;
+  letter-spacing: -1px;
+  color: var(--white);
+  margin-top: 16px;
+  animation: fadeUp .6s .1s ease both;
+}
+
+.error-desc {
+  font-size: 16px;
+  color: var(--muted);
+  margin-top: 12px;
+  animation: fadeUp .6s .2s ease both;
+}
+
+.error-btn {
+  margin-top: 40px;
+  animation: fadeUp .6s .3s ease both;
+}

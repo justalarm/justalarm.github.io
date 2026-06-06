@@ -1,0 +1,8 @@
+/* TEAM */
+Developer: JustAlarm
+Contact: justalarm05@gmail.com
+
+/* SITE */
+Last update: 2026-05-31
+Language: Korean
+Software: HTML, CSS, JavaScript, C#

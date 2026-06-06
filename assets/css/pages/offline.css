@@ -1,0 +1,25 @@
+.offline-section {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 24px;
+}
+
+.offline-icon { font-size: 64px; margin-bottom: 24px; }
+
+.offline-title {
+  font-size: clamp(24px, 4vw, 40px);
+  font-weight: 700;
+  letter-spacing: -1px;
+  color: var(--white);
+  margin-bottom: 12px;
+}
+
+.offline-desc {
+  font-size: 16px;
+  color: var(--muted);
+  margin-bottom: 40px;
+}

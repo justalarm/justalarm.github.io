@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://justalarm.github.io/sitemap.xml

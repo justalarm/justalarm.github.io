@@ -1,0 +1,228 @@
+.hero {
+  min-height: 100vh;
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  text-align: center;
+  padding: 120px 24px 60px;
+  position: relative;
+  overflow: hidden;
+}
+.hero-glow {
+  position: absolute; top: 50%; left: 50%;
+  transform: translate(-50%, -60%);
+  width: min(700px, 100%); height: 700px;
+  background: radial-gradient(circle, var(--accent-glow) 0%, transparent 65%);
+  pointer-events: none;
+}
+.download-glow {
+  position: absolute; top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  width: min(600px, 100%); height: 400px;
+  background: radial-gradient(ellipse, var(--accent-light) 0%, transparent 70%);
+  pointer-events: none;
+}
+.hero-badge {
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 8px 18px; border-radius: 100px;
+  border: 1px solid var(--accent-glow);
+  background: var(--accent-bg);
+  font-size: 15px; font-weight: 500; letter-spacing: 0.5px;
+  color: var(--accent);
+  margin-bottom: 32px;
+  animation: fadeUp .6s ease both;
+}
+.hero-icon {
+  margin-bottom: 32px;
+  animation: fadeUp .6s .1s ease both;
+  filter: drop-shadow(0 0 40px var(--shadow-sm));
+}
+.hero-icon-img {
+  width: 200px;
+  height: 200px;
+}
+h1 {
+  font-size: clamp(52px, 8vw, 96px);
+  font-weight: 700;
+  letter-spacing: -3px;
+  line-height: 1;
+  color: var(--white);
+  animation: fadeUp .6s .15s ease both;
+}
+h1 .highlight {
+  background: linear-gradient(135deg, var(--accent), var(--accent2));
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.hero-sub {
+  margin-top: 24px;
+  font-size: clamp(17px, 2.5vw, 22px);
+  font-weight: 300;
+  color: var(--muted);
+  max-width: 520px;
+  line-height: 1.6;
+  animation: fadeUp .6s .2s ease both;
+}
+.hero-actions {
+  margin-top: 48px;
+  display: flex; gap: 16px; flex-wrap: nowrap; justify-content: center;
+  animation: fadeUp .6s .3s ease both;
+}
+.version-tag {
+  margin-top: 20px;
+  font-size: 12px; color: var(--muted);
+  animation: fadeUp .6s .4s ease both;
+}
+
+.screenshot-wrap {
+  text-align: center;
+  padding: 60px 24px 0;
+}
+.screenshot-label {
+  font-size: 12px; font-weight: 500; letter-spacing: 2px;
+  color: var(--accent); text-transform: uppercase;
+  margin-bottom: 12px;
+}
+.screenshot-title {
+  font-size: clamp(28px, 4vw, 42px);
+  font-weight: 700; letter-spacing: -1px;
+  color: var(--white); margin-bottom: 40px;
+}
+.screenshot-img-wrap {
+  display: flex; justify-content: center;
+  padding: 0 24px 60px;
+}
+.screenshot-img {
+  width: 100%; max-width: 500px;
+  height: auto;
+  border-radius: 20px;
+  border: 1px solid var(--border);
+}
+
+.stats-wrap {
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+.stats {
+  padding: 80px 24px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  max-width: 720px;
+  margin: 0 auto;
+}
+.stat {
+  text-align: center;
+  padding: 20px 32px;
+  position: relative;
+}
+.stat:not(:last-child)::after {
+  content: '';
+  position: absolute; top: 20%; right: 0;
+  height: 60%; width: 1px;
+  background: var(--border);
+}
+.stat-num {
+  font-size: 52px; font-weight: 700; letter-spacing: -2px;
+  background: linear-gradient(135deg, var(--accent), var(--accent2));
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+  background-clip: text;
+  line-height: 1;
+}
+.stat-label { font-size: 14px; color: var(--muted); margin-top: 8px; letter-spacing: 0.2px; }
+
+.features {
+  padding: 60px 24px 100px;
+  max-width: 1200px; margin: 0 auto;
+}
+.section-label {
+  text-align: center;
+  font-size: 12px; font-weight: 500; letter-spacing: 2px;
+  color: var(--accent); text-transform: uppercase;
+  margin-bottom: 16px;
+}
+.section-title {
+  text-align: center;
+  font-size: clamp(32px, 5vw, 52px);
+  font-weight: 700; letter-spacing: -1.5px;
+  color: var(--white); margin-bottom: 64px;
+}
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.download {
+  padding: 120px 24px;
+  text-align: center;
+  position: relative; overflow: hidden;
+}
+.download h2 {
+  font-size: clamp(36px, 6vw, 64px);
+  font-weight: 700; letter-spacing: -2px;
+  color: var(--white); margin-bottom: 16px;
+}
+.download p {
+  font-size: 18px; color: var(--muted); margin-bottom: 48px;
+}
+.download-cards {
+  display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;
+}
+.download-card {
+  background: var(--surface2);
+  border: 1px solid var(--border);
+  border-radius: 20px; padding: 28px 36px;
+  min-width: 200px; cursor: pointer;
+  transition: transform .25s, border-color .25s, box-shadow .25s;
+  text-decoration: none; color: inherit;
+  display: flex; flex-direction: column; align-items: center; gap: 12px;
+  flex: 1; max-width: 240px;
+}
+.download-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--accent-hover);
+  box-shadow: 0 20px 60px var(--shadow-dark);
+}
+.download-card-icon { font-size: 40px; }
+.download-card-os { font-size: 15px; font-weight: 600; color: var(--white); }
+.download-card-ver { font-size: 12px; color: var(--muted); white-space: nowrap; }
+.download-card-btn {
+  margin-top: 4px;
+  padding: 8px 20px; border-radius: 100px;
+  background: linear-gradient(135deg, var(--accent), var(--accent2));
+  font-size: 13px; font-weight: 600; color: #000;
+}
+.changelog-link {
+  font-size: 13px;
+  color: var(--muted);
+  text-decoration: none;
+  display: block;
+  margin-top: 16px;
+  transition: color .2s;
+}
+.changelog-link:hover { color: var(--white); }
+
+.tagline,
+.built-with {
+  text-align: center;
+  font-size: 20px;
+  color: var(--muted);
+  letter-spacing: -0.3px;
+}
+.tagline { margin: 0 0 20px; }
+.built-with { margin: 0 0 50px; }
+
+.smartscreen {
+  padding: 40px 24px;
+  text-align: center;
+}
+.smartscreen-box {
+  max-width: 520px;
+  margin: 0 auto;
+  background: var(--surface2);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 32px;
+}
+.smartscreen-icon { font-size: 36px; margin-bottom: 16px; }
+.smartscreen-title { font-size: 18px; font-weight: 600; color: var(--white); margin-bottom: 12px; }
+.smartscreen-desc { font-size: 14px; color: var(--muted); line-height: 1.8; }
+.smartscreen-link { color: var(--accent); }
