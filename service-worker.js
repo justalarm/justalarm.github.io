@@ -1,4 +1,4 @@
-const CACHE_NAME = 'justalarm-v1.3.1';
+const CACHE_NAME = 'justalarm-v1.4';
 const ASSETS = [
   '/',
   '/index.html',
