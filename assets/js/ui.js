@@ -1,4 +1,4 @@
-const VERSION = 'v1.4';
+const VERSION = 'v1.5';
 document.querySelectorAll('[data-version]').forEach(el => {
   el.textContent = VERSION;
 });
